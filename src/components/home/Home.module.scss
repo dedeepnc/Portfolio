@@ -1,0 +1,128 @@
+@import "../../scss/main.scss";
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  @media only screen and (min-width: 940px) {
+    font-size: 3rem;
+    text-align: left;
+  }
+}
+
+h2 {
+  font-size: 1.25rem;
+  text-align: center;
+  @media only screen and (min-width: 940px) {
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
+
+.hand {
+  animation-name: wave;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+a {
+  color: $dark;
+  transition: color 200ms ease;
+}
+
+a:hover {
+  color: $lightgray;
+  transition: color 200ms ease;
+}
+
+@keyframes wave {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}.shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  z-index: -1; 
+}
+
+@keyframes moveShapes {
+  0%, 100% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(20px); 
+  }
+}
+
+.shape {
+  position: absolute;
+  animation: moveShapes 2s ease-in-out infinite; 
+}
+
+.shape.s1 {
+  left: 2%;
+  top: 10%;
+}
+
+.shape.s2 {
+  left: 18%;
+  top: 30%;
+}
+
+.shape.s3 {
+  left: 5%;
+  bottom: 30%;
+}
+
+.shape.s4 {
+  left: 2%;
+  bottom: 10%;
+}
+
+.shape.s5 {
+  left: 44%;
+  top: 10%;
+}
+
+.shape.s6 {
+  left: 36%;
+  bottom: 10%;
+}
+
+.shape.s7 {
+  top: 20%;
+  right: 25%;
+}
+
+.shape.s8 {
+  right: 24%;
+  bottom: 20%;
+}
+
+.shape.s9 {
+  right: 2%;
+  top: 10%;
+}
+
+.shape.s10 {
+  top: 45%;
+  right: 11%;
+}
+
+.shape.s11 {
+  bottom: 10%;
+  right: 2%;
+}
+
+

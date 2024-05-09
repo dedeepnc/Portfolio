@@ -1,0 +1,13 @@
+@import "../../scss/main.scss";
+
+.terminal {
+  p, li {
+    margin: 1rem 0;
+    color: $white;
+  }
+
+  a, a:visited {
+    animation: changeColors 3s infinite;
+    font-weight: bold;
+  }
+}
